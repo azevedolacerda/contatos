@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+}
+
+.main{
+    padding:  0 10% 0 10%;
+    min-width: 40em;
+}
+
+.title{
+    margin: 0;
+    color:darkslategrey;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.action{
+    padding-left: 0.7em;
+    width: 10%;
+    min-width: 5em;
+}
+
+.icone{
+    height: 3em
+}
+
+.nav{
+    padding-right: 0.7em;
+    height: 0.2m;
+    width: 100%;
+    
+}
+
+.nav p{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    text-align:right;
+}
+
+.table tbody{
+    cursor: pointer;
+}
