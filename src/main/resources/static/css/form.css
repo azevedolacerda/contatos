@@ -1,0 +1,16 @@
+@charset "ISO-8859-1";
+
+.form-new{
+	margin: 0.3em 0 1em 0;
+	border-top: 1px solid #c0c0c0;
+	padding-top:0.3em;
+}
+
+.form-new-footer{
+	text-align:right;
+	padding: 0 1em 0 0;
+}
+
+.form-new label{
+	margin-top:0.6em;
+}

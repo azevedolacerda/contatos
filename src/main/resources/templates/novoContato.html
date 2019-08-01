@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/header.css" rel="stylesheet">
+<link href="css/footer.css" rel="stylesheet">
+<link href="css/form.css" rel="stylesheet">
+<link type="text/css"
+	th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"
+	rel="stylesheet">
+<script type="text/javascript" src="/webjars/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript"
+	src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="header"></div>
+	<div class="main">
+		<h2 class="title">Novo Contato</h2>
+		<form action="novoContatoAct" method="get">
+			<div class="row form-new">
+				<div class="col-4 col-sm-5 col-md-5">
+					<label for="nome">* Nome</label> <input class="form-control"
+						type="text" name="nome" id="name">
+				</div>
+				<div class="col-3 col-sm-3 col-md-3">
+					<label for="telefone">* Telefone</label> <input class="form-control"
+						type="text" name="telefone" id="telefone">
+				</div>
+				<div class="col-3 col-sm-4 col-md-4">
+					<label for="email">* Email</label> <input class="form-control"
+						type="text" name="email" id="email">
+				</div>
+			</div>
+			<div class="row form-new-footer">
+				<button type="button" class="btn btn-secondary"
+					onclick="location.href='/'">Cancelar</button>
+				<button type="submit" class="btn btn-success">Salvar</button>
+
+			</div>
+		</form>
+	</div>
+	<div class="footer"></div>
+</body>
+</html>

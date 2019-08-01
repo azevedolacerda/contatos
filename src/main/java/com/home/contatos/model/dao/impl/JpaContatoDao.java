@@ -19,6 +19,12 @@ public class JpaContatoDao implements Dao<Contato>{
 	private EntityManager entityManager;
 	
 	@Override
+	public Contato getById(Integer id) {
+		Contato contato  = entityManager.find(Contato.class, id);
+		return contato;
+	}
+	
+	@Override
 	public void save(Contato t) {
 		entityManager.persist(t);
 	}
@@ -29,6 +35,22 @@ public class JpaContatoDao implements Dao<Contato>{
 		return entityManager.createQuery(query).getResultList();
 	}
 
+	@Override
+	public void delete(Contato t) {
+		entityManager.remove(t);
+	}
+	
+	public void delete(Integer id) {
+		delete(this.getById(id));
+	}
 
+	@Override
+	public void update(Contato t) {
+		Contato contato = getById(t.getId());
+		contato.setNome(t.getNome());
+		contato.setTelefone(t.getTelefone());
+		contato.setEmail(t.getEmail());
 
+		entityManager.flush();	
+	}
 }
